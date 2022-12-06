@@ -15,6 +15,8 @@ public class fenetredejeu extends javax.swing.JFrame {
      */
     public fenetredejeu() {
         initComponents();
+        panneau_info_joueur.setVisible(false);
+        panneau_info_joueur1.setVisible(false);
     }
 
     /**
@@ -37,6 +39,8 @@ public class fenetredejeu extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         courant = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        message = new javax.swing.JTextArea();
         panneau_info_partie = new javax.swing.JPanel();
         button_col_1 = new javax.swing.JButton();
         button_col_2 = new javax.swing.JButton();
@@ -100,6 +104,12 @@ public class fenetredejeu extends javax.swing.JFrame {
 
         jLabel7.setText("joueur courant");
         panneau_info_joueur.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+
+        message.setColumns(20);
+        message.setRows(5);
+        jScrollPane1.setViewportView(message);
+
+        panneau_info_joueur.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         getContentPane().add(panneau_info_joueur, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 400, 290, 230));
 
@@ -178,6 +188,8 @@ public class fenetredejeu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        panneau_info_joueur.setVisible(true);
+        panneau_info_joueur1.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -239,7 +251,9 @@ public class fenetredejeu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextArea message;
     private javax.swing.JLabel nbdesin3;
     private javax.swing.JLabel nbdesin4;
     private javax.swing.JTextField nomjoueur1;
