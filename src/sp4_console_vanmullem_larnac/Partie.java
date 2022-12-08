@@ -13,9 +13,10 @@ import java.util.Scanner;
  */
 public class Partie {
     
-    private joueur listeJoueurs[]= new joueur[2]; //tableau référence des deux joueurs 
-    private joueur joueurCourant;
-    private PlateauDeJeu plateau;
+    joueur listeJoueurs[]= new joueur[2]; //tableau référence des deux joueurs 
+    joueur joueurCourant;
+    CelluleDeGrille grilledejeu = new CelluleDeGrille();
+    PlateauDeJeu plateau;
     
     public Partie(joueur joueur1, joueur joueur2) {
         listeJoueurs[0]=joueur1;

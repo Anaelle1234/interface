@@ -11,5 +11,9 @@ import javax.swing.JButton;
  * @author Anaëlle
  */
 public class cellulegraphique extends JButton{
-    CelluleDeGrille celluleassocie;
+    CelluleDeGrille celluleAssocie;
+    
+    public cellulegraphique(CelluleDeGrille uneCellule){
+        celluleAssocie=uneCellule;
+    }
 }

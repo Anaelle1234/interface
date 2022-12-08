@@ -9,11 +9,12 @@ package sp4_console_vanmullem_larnac;
  * @author Anaëlle
  */
 public class fenetredejeu extends javax.swing.JFrame {
- 
-    
-    private joueur listeJoueurs[]= new joueur[2]; //tableau référence des deux joueurs 
-    private joueur joueurCourant;
-    private PlateauDeJeu plateau;
+
+    joueur listeJoueurs[] = new joueur[2]; //tableau référence des deux joueurs 
+    joueur joueurCourant;
+    PlateauDeJeu plateau;
+    CelluleDeGrille grille = new CelluleDeGrille();
+
     /**
      * Creates new form fenetredejeu
      */
@@ -21,9 +22,9 @@ public class fenetredejeu extends javax.swing.JFrame {
         initComponents();
         panneau_info_joueur.setVisible(false);
         panneau_info_joueur1.setVisible(false);
-        for(int i=5; i>=0;i--){
-            for(int j=0; j>7;j++){
-                cellulegraphique cellgraphe = new cellulegraphique();
+        for (int i = 5; i >= 0; i--) {
+            for (int j = 0; j > 7; j++) {
+                cellulegraphique cellgraphe = new cellulegraphique(grille);
                 panneau_grille.add(cellgraphe);
             }
         }
