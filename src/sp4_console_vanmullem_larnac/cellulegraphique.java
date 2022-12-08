@@ -4,10 +4,12 @@
  */
 package sp4_console_vanmullem_larnac;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author Anaëlle
  */
-public class cellulegraphique extends Jbutton{
-    
+public class cellulegraphique extends JButton{
+    CelluleDeGrille celluleassocie;
 }

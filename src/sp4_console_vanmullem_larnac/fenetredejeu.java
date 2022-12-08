@@ -9,7 +9,11 @@ package sp4_console_vanmullem_larnac;
  * @author Anaëlle
  */
 public class fenetredejeu extends javax.swing.JFrame {
-
+ 
+    
+    private joueur listeJoueurs[]= new joueur[2]; //tableau référence des deux joueurs 
+    private joueur joueurCourant;
+    private PlateauDeJeu plateau;
     /**
      * Creates new form fenetredejeu
      */
@@ -17,6 +21,12 @@ public class fenetredejeu extends javax.swing.JFrame {
         initComponents();
         panneau_info_joueur.setVisible(false);
         panneau_info_joueur1.setVisible(false);
+        for(int i=5; i>=0;i--){
+            for(int j=0; j>7;j++){
+                cellulegraphique cellgraphe = new cellulegraphique();
+                panneau_grille.add(cellgraphe);
+            }
+        }
     }
 
     /**
@@ -28,7 +38,7 @@ public class fenetredejeu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        button_col = new javax.swing.JPanel();
+        panneau_grille = new javax.swing.JPanel();
         panneau_info_jeu = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -68,9 +78,9 @@ public class fenetredejeu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        button_col.setBackground(new java.awt.Color(255, 255, 255));
-        button_col.setLayout(new java.awt.GridLayout(6, 7));
-        getContentPane().add(button_col, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 672, 576));
+        panneau_grille.setBackground(new java.awt.Color(255, 255, 255));
+        panneau_grille.setLayout(new java.awt.GridLayout(6, 7));
+        getContentPane().add(panneau_grille, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 672, 576));
 
         panneau_info_jeu.setBackground(new java.awt.Color(204, 255, 204));
         panneau_info_jeu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -228,7 +238,6 @@ public class fenetredejeu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel button_col;
     private javax.swing.JButton button_col_0;
     private javax.swing.JButton button_col_1;
     private javax.swing.JButton button_col_2;
@@ -260,6 +269,7 @@ public class fenetredejeu extends javax.swing.JFrame {
     private javax.swing.JTextField nomjoueur2;
     private javax.swing.JLabel nomjoueur4;
     private javax.swing.JLabel nomjoueur5;
+    private javax.swing.JPanel panneau_grille;
     private javax.swing.JPanel panneau_info_jeu;
     private javax.swing.JPanel panneau_info_joueur;
     private javax.swing.JPanel panneau_info_joueur1;
