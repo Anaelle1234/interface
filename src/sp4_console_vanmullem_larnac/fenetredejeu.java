@@ -10,6 +10,7 @@ package sp4_console_vanmullem_larnac;
  */
 public class fenetredejeu extends javax.swing.JFrame {
 
+    
     joueur listeJoueurs[] = new joueur[2]; //tableau référence des deux joueurs 
     joueur joueurCourant;
     PlateauDeJeu plateau;
