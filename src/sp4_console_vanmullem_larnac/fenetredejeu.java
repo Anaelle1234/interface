@@ -24,7 +24,7 @@ public class fenetredejeu extends javax.swing.JFrame {
         panneau_info_joueur.setVisible(false);
         panneau_info_joueur1.setVisible(false);
         for (int i = 5; i >= 0; i--) {
-            for (int j = 0; j > 7; j++) {
+            for (int j = 0; j < 7; j++) {
                 cellulegraphique cellgraphe = new cellulegraphique(grille);
                 panneau_grille.add(cellgraphe);
             }
